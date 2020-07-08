@@ -1,8 +1,20 @@
-import React from 'react';
+import React,  { useState, useEffect } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import openSocket from 'socket.io-client';
+const  socket = openSocket('http://localhost:4000');
 
 function App() {
+
+  useEffect(() => {
+    console.log("Inside!");
+    // var socket1 = socket('/stackabuse');
+    // socket.emit('clientEvent', 'Sent an event from the client!');
+    socket.on('connectToRoom',function(data) {
+      console.log(data);
+    });
+
+  });
   return (
     <div className="App">
       <header className="App-header">
