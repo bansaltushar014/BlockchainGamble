@@ -10,7 +10,7 @@ const app = express();
 
 const Schema = mongoose.Schema;
 const port = process.env.PORT || 4000;
- 
+const path = require('path');
 let server = http.createServer(app) 
 let io = socketIO(server)  
  
@@ -23,7 +23,7 @@ io.on('connection', (socket) => {
 //  });
 
 //Increase roomno 2 clients are present in a room.
-if(io.nsps['/'].adapter.rooms["room-"+roomno] && io.nsps['/'].adapter.rooms["room-"+roomno].length > 1) roomno++;
+if(io.nsps['/'].adapter.rooms["room-"+roomno] && io.nsps['/'].adapter.rooms["room-"+roomno].length > 5) roomno++;
 socket.join("room-"+roomno);
 
 //Send this event to everyone in the room.
@@ -58,7 +58,7 @@ app.use(function (req, res, next) {
 });
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
- 
+app.use('/static', express.static(path.join(__dirname, '../build/contracts')));
 // app.get('/', fetch.data);
  
 app.post('/api/postChainData', (req,res,next)=> {
@@ -84,11 +84,14 @@ app.post('/api/postChainData', (req,res,next)=> {
  
 // app.get('/api/getChainData', fetch.getChainData);
  
- 
+//  It is for the testing
 app.get('/api', (req,res) => {
   res.sendFile(__dirname + '/file.html');
 })
  
+// app.get('/json', (req, res) => {
+//   res.sendFile(__dirname + '../build/contracts/Gamble.json');
+// })
 
 app.get('/', (req,res) => {
   res.send(" Working");
