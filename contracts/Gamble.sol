@@ -14,7 +14,7 @@ contract Gamble {
 // address payable seller;
    
   constructor() payable public {
-// seller = msg.sender;
+  // seller = msg.sender;
     }
 
   function getEth() external payable{
