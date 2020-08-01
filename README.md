@@ -24,4 +24,4 @@ npm install  <br>
 cd ..  <br>
 npm start
 
-### To know more and to contribute please <a hreaf="https://github.com/bansaltushar014/gamble/wiki/Gamble">visit this link.</a>
+### To know more and to contribute please <a href="https://github.com/bansaltushar014/gamble/wiki/Gamble">visit this link.</a>
