@@ -14,7 +14,6 @@ function App() {
 
   useEffect(() => {
     console.log(webValue);
-    
     // Interect with Smart contract here
     console.log("Inside!");
     // var socket1 = socket('/stackabuse');
