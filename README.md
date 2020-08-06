@@ -13,15 +13,15 @@ This project is online Blockchain game where a room of 5 players gets created, b
 
 ## How to start 
 
-start ganache at port 7545 <br>
-git clone https://github.com/bansaltushar014/gamble.git <br>
-cd gamble <br>
-truffle compile <br>
-truffle migrate <br>
-npm install  <br>
-cd frontend  <br>
-npm install  <br>
-cd ..  <br>
-npm start
+=> start ganache at port 7545 <br>
+=> git clone https://github.com/bansaltushar014/gamble.git <br>
+=> cd gamble <br>
+=> truffle compile <br>
+=> truffle migrate <br>
+=> npm install  <br>
+=> cd frontend  <br>
+=> npm install  <br>
+=> cd ..  <br>
+=> npm start
 
 ### To know more and to contribute please <a href="https://github.com/bansaltushar014/gamble/wiki/Gamble">visit this link.</a>
